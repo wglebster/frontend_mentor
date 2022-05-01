@@ -16,11 +16,16 @@ body{
 #star{
     /* height: 10%; */
     width: 5%;
-    background-color: hsl(216, 12%, 54%);
+    background-color: hsl(216, 6%, 31%);
     padding: 4%;
     border-radius: 50%;
     margin-left: 4%;
     margin-bottom: 4%;
+}
+
+#thank-you{
+    width: 40%;
+    margin: 0 auto;
 }
 .state{
     width: 23%;
@@ -28,14 +33,11 @@ body{
     padding: 2%;
     border-radius: 10px;
     font-family: Overpass, sans-serif;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 .state li{
     display: inline;
     list-style: none;
-    background-color: hsl(216, 12%, 54%);
+    background-color: hsl(216, 6%, 31%);
     padding: 3% 5%;
     margin: 2% auto;
     border-radius: 50%;
@@ -71,13 +73,26 @@ button:hover{
     cursor: pointer;
 }
 
-
 #initial{
-    
+    display: flex; /* flex */
+    justify-content: center;
+    flex-direction: column;
 }
+
 #completed{
-    display: none;
+    display: none; /* flex */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+#completed span{
+    margin-top: 6%;
+    background-color: hsl(216, 6%, 31%);
+    color: hsl(25, 97%, 53%);
+    padding: 2%;
+    border-radius: 20px;
+}
+
 .attribution{
     display: none;
 }

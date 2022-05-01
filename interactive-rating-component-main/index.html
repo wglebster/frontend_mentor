@@ -14,12 +14,12 @@
 </head>
 
 <body>
-  <section class="state" id="initial"> 
+  <section class="state" id="initial">
     <img src="./images/icon-star.svg" alt="star" id="star">
     <h1>How did we do?</h1>
 
     <p>Please let us know how we did with your support request. All feedback is appreciated
-    to help us improve our offering!</p>
+      to help us improve our offering!</p>
 
     <ul>
       <li style="letter-spacing: 3px"> 1</li>
@@ -29,17 +29,18 @@
       <li>5</li>
     </ul>
 
-    <button>Submit</button>
+    <button onclick="getRating">Submit</button>
 
   </section>
 
-<section class = "state" id="completed">
-    You selected xx out of 5
+  <section class="state" id="completed">
+    <img src="./images/illustration-thank-you.svg"  alt="illustration thank you" id="thank-you">
+    <span>You selected xx out of 5</span>
 
-    Thank you!
+    <h1>Thank you!</h1>
 
-    We appreciate you taking the time to give a rating. If you ever need more support,
-    don’t hesitate to get in touch!
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in
+      touch!</p>
   </section>
 
 
@@ -48,6 +49,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Glebster</a>.
   </div>
+
+  <script src="./script.js"></script>
+
 </body>
 
 </html>

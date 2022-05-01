@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+html{
+    background-color:  hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+}
+
+body{
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#star{
+    /* height: 10%; */
+    width: 5%;
+    background-color: hsl(216, 12%, 54%);
+    padding: 4%;
+    border-radius: 50%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+.state{
+    width: 23%;
+    background-color: hsl(213, 19%, 18%);
+    padding: 2%;
+    border-radius: 10px;
+    font-family: Overpass, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.state li{
+    display: inline;
+    list-style: none;
+    background-color: hsl(216, 12%, 54%);
+    padding: 3% 5%;
+    margin: 2% auto;
+    border-radius: 50%;
+}
+.state li:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.state ul{
+    padding-inline-start: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.state h1, p{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+button{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    width: 90%;
+    margin: 3% auto 0;
+    border: 0;
+    padding: 3% 2%;
+    border-radius: 20px;    
+}
+button:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    cursor: pointer;
+}
+
+
+#initial{
+    
+}
+#completed{
+    display: none;
+}
+.attribution{
+    display: none;
+}

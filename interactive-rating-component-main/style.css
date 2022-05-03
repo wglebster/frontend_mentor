@@ -47,6 +47,7 @@ body{
     color: hsl(0, 0%, 100%);
     cursor: pointer;
 }
+
 .state ul{
     padding-inline-start: 0;
     display: flex;

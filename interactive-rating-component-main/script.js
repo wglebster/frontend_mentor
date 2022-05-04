@@ -1,25 +1,23 @@
-let rating = document.getElementsByClassName("rating")[i];
+/* const rate1 = document.getElementById("1st");
+const rate2 = document.getElementById("2nd");
+const rate3 = document.getElementById("3rd");
+const rate4 = document.getElementById("4th");
+const rate5 = document.getElementById("5th");
 
-function changeColor(){
-    switch(rating) {
-        case 0: 
-        rating[0].style.backgroundColor = "#fb7413";
-        break;
-        case 1:
-        rating[1].style.backgroundColor = "#fb7413";
-        break;
-        case 2:
-        rating[2].style.backgroundColor = "#fb7413";
-        break;
-        case 3: 
-        rating[3].style.backgroundColor = "#fb7413";
-        break;
-        case 4:
-        rating[4].style.backgroundColor = "#fb7413";
-        break;
-    }
+ function changeColor(){
+    document.target.style.backgroundColor = "#fb7413";
+} 
 
-
-
-    rating[i].style.backgroundColor = "#fb7413";
+rate1.addEventListener("click", changeColor);
+rate2.addEventListener("click", changeColor);
+rate3.addEventListener("click", changeColor);
+rate4.addEventListener("click", changeColor);
+rate5.addEventListener("click", changeColor); */
+/* function changeColor(e){
+    e.target.style.background = "#fb7413";
 }
+
+let ratings = document.getElementsByTagName("li");
+for (let i = 0; i < ratings.length; i++) {
+    ratings[i].style.backgroundColor = changeColor;
+}; */

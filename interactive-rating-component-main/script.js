@@ -8,6 +8,7 @@ const submit = document.querySelector("button");
 const initialScreen = document.getElementById("initial")
 const completedScreen = document.getElementById("completed");
 
+//rate event listeners are in dire need of refactoring
 rate1.addEventListener("click", function(){
     rate1.style.backgroundColor = "#fb7413";
     rate2.style.backgroundColor = "";
@@ -54,15 +55,3 @@ submit.addEventListener("click", function(){
     completedScreen.style.display = "flex";
     document.getElementById("given-rating").innerHTML = "You selected " + rating + " out of 5";
 });
-
-
-
-
-/* function changeColor(e){
-    e.target.style.background = "#fb7413";
-}
-
-let ratings = document.getElementsByTagName("li");
-for (let i = 0; i < ratings.length; i++) {
-    ratings[i].style.backgroundColor = changeColor;
-}; */

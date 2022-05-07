@@ -5,6 +5,8 @@ const rate4 = document.getElementById("rate4");
 const rate5 = document.getElementById("rate5");
 let rating = null;
 const submit = document.querySelector("button");
+const initialScreen = document.getElementById("initial")
+const completedScreen = document.getElementById("completed");
 
 rate1.addEventListener("click", function(){
     rate1.style.backgroundColor = "#fb7413";
@@ -48,7 +50,9 @@ rate5.addEventListener("click", function(){
 });
 
 submit.addEventListener("click", function(){
-    
+    initialScreen.style.display = "none";
+    completedScreen.style.display = "flex";
+    document.getElementById("given-rating").innerHTML = "You selected " + rating + " out of 5";
 });
 
 

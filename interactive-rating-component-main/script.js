@@ -1,18 +1,59 @@
-/* const rate1 = document.getElementById("1st");
-const rate2 = document.getElementById("2nd");
-const rate3 = document.getElementById("3rd");
-const rate4 = document.getElementById("4th");
-const rate5 = document.getElementById("5th");
+const rate1 = document.getElementById("rate1");
+const rate2 = document.getElementById("rate2");
+const rate3 = document.getElementById("rate3");
+const rate4 = document.getElementById("rate4");
+const rate5 = document.getElementById("rate5");
+let rating = null;
+const submit = document.querySelector("button");
 
- function changeColor(){
-    document.target.style.backgroundColor = "#fb7413";
-} 
+rate1.addEventListener("click", function(){
+    rate1.style.backgroundColor = "#fb7413";
+    rate2.style.backgroundColor = "";
+    rate3.style.backgroundColor = "";
+    rate4.style.backgroundColor = "";
+    rate5.style.backgroundColor = "";
+    rating = rate1.innerHTML;
+});
+rate2.addEventListener("click", function(){
+    rate2.style.backgroundColor = "#fb7413";
+    rate1.style.backgroundColor = "";
+    rate3.style.backgroundColor = "";
+    rate4.style.backgroundColor = "";
+    rate5.style.backgroundColor = "";
+    rating = rate2.innerHTML;
+});
+rate3.addEventListener("click", function(){
+    rate3.style.backgroundColor = "#fb7413";
+    rate2.style.backgroundColor = "";
+    rate1.style.backgroundColor = "";
+    rate4.style.backgroundColor = "";
+    rate5.style.backgroundColor = "";
+    rating = rate3.innerHTML;
+});
+rate4.addEventListener("click", function(){
+    rate4.style.backgroundColor = "#fb7413";
+    rate2.style.backgroundColor = "";
+    rate3.style.backgroundColor = "";
+    rate1.style.backgroundColor = "";
+    rate5.style.backgroundColor = "";
+    rating = rate4.innerHTML;
+});
+rate5.addEventListener("click", function(){
+    rate5.style.backgroundColor = "#fb7413";
+    rate2.style.backgroundColor = "";
+    rate3.style.backgroundColor = "";
+    rate4.style.backgroundColor = "";
+    rate1.style.backgroundColor = "";
+    rating = rate5.innerHTML;
+});
 
-rate1.addEventListener("click", changeColor);
-rate2.addEventListener("click", changeColor);
-rate3.addEventListener("click", changeColor);
-rate4.addEventListener("click", changeColor);
-rate5.addEventListener("click", changeColor); */
+submit.addEventListener("click", function(){
+    
+});
+
+
+
+
 /* function changeColor(e){
     e.target.style.background = "#fb7413";
 }
@@ -21,18 +62,3 @@ let ratings = document.getElementsByTagName("li");
 for (let i = 0; i < ratings.length; i++) {
     ratings[i].style.backgroundColor = changeColor;
 }; */
-const ids = ["rate1", "rate2", "rate3", "rate4", "rate5"];
-const ratings = [];
-ids.forEach(function(id){
-    ratings.push(document.getElementById(id));
-});
-
-const changeColor = (e) => {
-    e.target.style.backgroundColor = "fb7413";
-};
-
-let eventAssignment = (rating) => {
-    rating.onclick = function(){
-        changeColor(e);
-    }
-};

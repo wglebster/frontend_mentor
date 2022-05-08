@@ -15,6 +15,7 @@ body{
     width: 1440px;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -81,13 +82,13 @@ button:hover{
 }
 
 #initial{
-    display: flex; /* flex */
+    display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
 #completed{
-    display: none; /* flex */
+    display: none;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -100,8 +101,15 @@ button:hover{
     border-radius: 20px;
 }
 
-.attribution{
-    display: none;
+ .attribution{
+    color: hsl(216, 6%, 31%);
+    text-align: center;
+    font-family: Overpass, sans-serif;
+    font-size: 0.5rem;
+    margin-top: 2%;
+}
+.attribution a{
+    color: hsl(25, 97%, 53%);
 }
 
 @media only screen and (min-width: 375px){

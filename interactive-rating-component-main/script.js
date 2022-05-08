@@ -1,70 +1,54 @@
-const rate1 = document.getElementById("rate1");
+/* declare variables for rating elements */
+const rate1 = document.getElementById("rate1");  
 const rate2 = document.getElementById("rate2");
 const rate3 = document.getElementById("rate3");
 const rate4 = document.getElementById("rate4");
 const rate5 = document.getElementById("rate5");
-const ratings = ["rate1", "rate2", "rate3", "rate4", "rate5"];
+/* select all rating elements, create an array and declare a variable */
+const ratings = Array.from(document.querySelectorAll("li"));
+/* default rating variable */
 let rating = null;
+/* submit button variable */
 const submit = document.querySelector("button");
+/* initial state box variable*/
 const initialScreen = document.getElementById("initial")
+/* variable for screen after sibmitting feedback */
 const completedScreen = document.getElementById("completed");
 
-function defaultColour(e){
-    e.style.backgroundColor = "";
-}
-
-//rate event listeners are in dire need of refactoring
-rate1.addEventListener("click", function(){
-    
-    rate1.style.backgroundColor = "#fb7413";
-    ratings.forEach(e => defaultColour(e));
-    /* rate2.style.backgroundColor = "";
-    rate3.style.backgroundColor = "";
-    rate4.style.backgroundColor = "";
-    rate5.style.backgroundColor = ""; */
-    rating = rate1.innerHTML;
+//some more refactoring should be done for setting #fb7413 colour and getting innerHTML
+/* first rating element functionality */
+rate1.addEventListener("click", function(){ //on first rating elelemt click
+    ratings.forEach(r => r.style.backgroundColor = ""); //set default color for all rating elements
+    rate1.style.backgroundColor = "#fb7413"; //set color for the cxlicked on rating element
+    rating = rate1.innerHTML; //get rating element innerHTML and save value in a variable
 });
+/* second rating element fuunctionality */
 rate2.addEventListener("click", function(){
+    ratings.forEach(r => r.style.backgroundColor = "");
     rate2.style.backgroundColor = "#fb7413";
-    ratings.forEach(e => defaultColour(e));
-/*     rate1.style.backgroundColor = "";
-    rate3.style.backgroundColor = "";
-    rate4.style.backgroundColor = "";
-    rate5.style.backgroundColor = ""; */
     rating = rate2.innerHTML;
 });
+/* third rating element fuunctionality */
 rate3.addEventListener("click", function(){
+    ratings.forEach(r => r.style.backgroundColor = "");
     rate3.style.backgroundColor = "#fb7413";
-    ratings.forEach(e => defaultColour(e));
-/*     rate2.style.backgroundColor = "";
-    rate1.style.backgroundColor = "";
-    rate4.style.backgroundColor = "";
-    rate5.style.backgroundColor = ""; */
     rating = rate3.innerHTML;
 });
+/* fourth rating element fuunctionality */
 rate4.addEventListener("click", function(){
+    ratings.forEach(r => r.style.backgroundColor = "");
     rate4.style.backgroundColor = "#fb7413";
-    ratings.forEach(e => defaultColour(e));
-/*     rate2.style.backgroundColor = "";
-    rate3.style.backgroundColor = "";
-    rate1.style.backgroundColor = "";
-    rate5.style.backgroundColor = ""; */
     rating = rate4.innerHTML;
 });
+/* fifth rating element fuunctionality */
 rate5.addEventListener("click", function(){
+    ratings.forEach(r => r.style.backgroundColor = "");
     rate5.style.backgroundColor = "#fb7413";
-    ratings.forEach(e => defaultColour(e));
-/*     rate2.style.backgroundColor = "";
-    rate3.style.backgroundColor = "";
-    rate4.style.backgroundColor = "";
-    rate1.style.backgroundColor = ""; */
     rating = rate5.innerHTML;
 });
-
-submit.addEventListener("click", function(){
-    initialScreen.style.display = "none";
-    completedScreen.style.display = "flex";
-    document.getElementById("given-rating").innerHTML = "You selected " + rating + " out of 5";
+/* submit button functionality */
+submit.addEventListener("click", function(){ //on submit button click event
+    initialScreen.style.display = "none"; //hide initial screen (box)
+    completedScreen.style.display = "flex"; //show completed screen (box)
+    document.getElementById("given-rating").innerHTML = `You selected ${rating} out of 5`; //display rating out of 5
 });
-
-alert(ratings);
